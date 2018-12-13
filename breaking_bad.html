@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Breaking Bad quotes game</title>
+		<link rel="stylesheet" href="breaking_bad_style.css">
+	</head>
+	<body>	
+		<div id="masque-opaque">
+
+			<div class="popup">
+			Congratulations !
+			<img id="gif" class="gif-picture" alt="picture of the gif" src="img/13-winner1.gif"/>
+			<a href="#noWhere">
+			<button id="replay_button" class="bold" type="button">Play again !</button>
+			<!--<img id="croix" alt="picture of cross" src="img/checkmark.png"/>--!>
+			</a>
+			</div>
+		
+		</div>
+		<h1 id="title">Quotes Game</h1>
+		<img id="logo" class="logo-picture" alt="picture of the logo" src="img/logo.png"/>
+		<img id="erlenmeyer" class="erlenmenyer-picture" alt="picture of the erlenmeyer" src="img/erlenmeyer.png"/>
+		<img id="smoke" class="smoke-picture" alt="picture of the smoke" src="img/smoke.gif"/>
+		<div id="wrapper">
+			<section id="quotes">
+				<h2 id="question">Who said that?</h2>
+				<div id="quote"></div>
+			</section>
+			<form id="form">
+				<div id="characters">
+					<select id="selector">
+						<option value="Walter_White">Walter White</option>
+						<option value="Jesse_Pinkman">Jesse Pinkman</option>
+						<option value="Mike_Ehrmantraut">Mike Ehrmantraut</option>
+						<option value="Saul_Goodman">Saul Goodman</option>
+						<option value="Skyler_">Skyler</option>
+						<option value="Hank_Schrader">Hank Schrader</option>
+						<option value="Badger_">Badger</option>
+						<option value="The_fly">The fly</option>
+						<option value="?_" selected>--select a character--</option>					
+					</select>
+					<img id="walter_white" class="character-picture picture-active" alt="picture of the character" src="img/point_d'interrogation.png">
+				</div>
+				<div id="buttons">
+					<input id="inputSubmit" class="bold" type="submit" value="Let's Go !" onclick="location.href='#masque-opaque';">
+					<input id="inputSubmit2" class="bold" type="submit" value="Try an other quote">
+				</div>
+			</form>
+		</div>
+		<script src="breaking_bad.js"></script>
+	</body>
+</html>
