@@ -6,12 +6,10 @@ body{
 	background-color: #eae8dc;
 }
 
-/*#titles{
-	display:flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-top: -70px;
-}*/
+
+.modal-active {
+    display: initial !important;
+}
 
 #masque-opaque{
 	display: none;
@@ -24,9 +22,6 @@ body{
 	z-index: 1000;
 }
 
-#masque-opaque:target{
-	display: block;
-}
 
 #masque-opaque a{
 	position: absolute;
@@ -42,17 +37,43 @@ body{
 	height: 400px;
 	display: flex;
 	flex-direction: column;
+	animation: grow 0.5s ease-out;
 }
 
-#gif{
-	margin: auto;
-	width: 250px;
+@keyframes grow{
+    from {
+    	transform: scale(0.9, 0.9);
+        opacity: 0;
+    }
+    to{
+    	opacity: 1;
+    }
 }
+
+
+
+.final-gif{
+	display: none;
+	margin: auto;
+}
+
+.gif-active{
+	display: inline;
+}
+
+#gifWin{
+	width: 400px;
+}
+
+#gifLoose0,#gifLoose1,#gifLoose2,#gifLoose3{
+	width: 270px;
+}
+
 
 #replay_button{
 	margin: 0 auto;
 	margin-top: 415px;
-	margin-left: 162px;
+	margin-left: 174px;
 }
 
 #title{
@@ -86,7 +107,7 @@ body{
 
 #wrapper{
 	display: flex;
-	height: 600px;
+	height: 534px;
 	flex-direction: column;
 	justify-content: space-around;
 	margin-left: auto;
@@ -116,9 +137,18 @@ body{
 }
 
 #characters{
+	position: relative;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
+}
+
+#arrow{
+	position: absolute;		
+	width: 44px;
+	left: 280px;
+	top: 6px;
+	pointer-events: none;
 }
 
 #selector{
@@ -126,20 +156,42 @@ body{
 	background: #538745;
 	color: white;
 	-webkit-appearance: none;
-	border: 2px solid;
+	/*border: 2px solid;*/
 	border-radius: 8px;
 	width: 335px;
 	height: 57px;
 	font-size: 14pt;
 	padding: 2pt;
+	/*font-family: inherit;*/
 }
 
 .character-picture{
+	display: none;
 	height: 230px;
 	margin-top: -90px;
 	margin-left: 60px;
 	margin-right: auto;
+	animation: slide 0.5s ease-out;
 }
+
+#unknown{
+	animation: none;
+}
+
+@keyframes slide{
+	from{
+		transform: translateX(20px);
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+.picture-active{
+	display: inline;
+}
+
 
 #buttons{
 	margin: 0 auto;
@@ -165,4 +217,97 @@ body{
 .bold:hover{
 	background-color: #538745;
 	color:white;
+}
+
+@media (max-width: 768px){
+
+.popup{
+	width: 280px;		
+	height: 500px;
+}
+
+.final-gif{
+	width: 270px;
+}
+
+
+#replay_button{
+	margin-left: 14px;
+	margin-top: 505px;
+}
+
+#title{
+	margin-top: 55px;
+}
+
+#logo{
+	width: 100px;
+	height: 62px;
+}
+
+#erlenmeyer{
+	width: 40px;
+	height: 50px;
+}
+
+#smoke{
+	width: 50px;
+	height: 68px;
+	bottom: 47px;
+	right: -1px;
+}
+
+#wrapper{
+	justify-content: space-evenly;
+}
+
+#form{
+	height: 370px;
+}
+
+#characters{
+	height: 209px;
+	margin: auto;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+@keyframes slide{
+	from{
+		transform: translateX(10px);
+		opacity:0;
+	}
+}
+
+
+#selector{
+	width: 200px;
+	height: 50px;
+}
+
+#arrow{
+	width: 22px;
+	left: 174px;
+	top: 28px;
+}
+
+.character-picture{
+	height: 130px;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+#images{
+	margin: auto;
+}
+
+#buttons{
+	display: flex;
+	flex-direction: column;
+}
+
+#inputSubmit{
+	width: 300px;
+}
+
 }

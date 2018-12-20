@@ -8,17 +8,24 @@
 	</head>
 	<body>	
 		<div id="masque-opaque">
-
 			<div class="popup">
-			Congratulations !
-			<img id="gif" class="gif-picture" alt="picture of the gif" src="img/13-winner1.gif"/>
-			<a href="#noWhere">
+			<p id="result"></p>
+			<img id="gifWin0" class="final-gif" alt="picture of the gifWin 0" src="img/iWon.gif"/>
+			<img id="gifWin1" class="final-gif" alt="picture of the gifWin 1" src="img/you'reGoddamnRight.gif"/>
+			<img id="gifWin2" class="final-gif" alt="picture of the gifWin 2" src="img/hellYeah.gif"/>
+			<img id="gifWin3" class="final-gif" alt="picture of the gifWin 3" src="img/yeahBitch.gif"/>
+			<img id="gifLoose0" class="final-gif" alt="picture of the gifLoose 0" src="img/seriously.gif"/>
+			<img id="gifLoose1" class="final-gif" alt="picture of the gifLoose 1" src="img/thisIsIt.gif"/>
+			<img id="gifLoose2" class="final-gif" alt="picture of the gifLoose 2" src="img/sayWhat.gif"/>
+			<img id="gifLoose3" class="final-gif" alt="picture of the gifLoose 3" src="img/explainYourself.gif"/>
+			<p id="soluce"></p>
+			<a href="breaking_bad.html">
 			<button id="replay_button" class="bold" type="button">Play again !</button>
 			<!--<img id="croix" alt="picture of cross" src="img/checkmark.png"/>--!>
 			</a>
 			</div>
-		
 		</div>
+		
 		<h1 id="title">Quotes Game</h1>
 		<img id="logo" class="logo-picture" alt="picture of the logo" src="img/logo.png"/>
 		<img id="erlenmeyer" class="erlenmenyer-picture" alt="picture of the erlenmeyer" src="img/erlenmeyer.png"/>
@@ -31,20 +38,35 @@
 			<form id="form">
 				<div id="characters">
 					<select id="selector">
-						<option value="Walter_White">Walter White</option>
-						<option value="Jesse_Pinkman">Jesse Pinkman</option>
-						<option value="Mike_Ehrmantraut">Mike Ehrmantraut</option>
-						<option value="Saul_Goodman">Saul Goodman</option>
-						<option value="Skyler_">Skyler</option>
-						<option value="Hank_Schrader">Hank Schrader</option>
-						<option value="Badger_">Badger</option>
-						<option value="The_fly">The fly</option>
-						<option value="?_" selected>--select a character--</option>					
+						<option value="walter_white">Walter White</option>
+						<option value="jesse_pinkman">Jesse Pinkman</option>
+						<option value="mike_ehrmantraut">Mike Ehrmantraut</option>
+						<option value="saul_goodman">Saul Goodman</option>
+						<option value="gustavo_fring">Gustavo Fring</option>
+						<option value="skyler">Skyler</option>
+						<option value="hank_schrader">Hank Schrader</option>
+						<option value="badger">Badger</option>
+						<option value="the_fly">The fly</option>
+						<option value="unknown" selected>--select a character--</option>					
 					</select>
-					<img id="walter_white" class="character-picture picture-active" alt="picture of the character" src="img/point_d'interrogation.png">
+					<div class="select-icon">
+						<img id="arrow" alt="picture of the arrow" src="img/arrow.png"/>
+					</div>
+					<div id="images">
+						<img id="walter_white" class="character-picture" alt="picture of Walter White" src="img/walterWhite.jpg">
+						<img id="jesse_pinkman" class="character-picture" alt="picture of Jesse Pinkman" src="img/jessePinkman.jpg">
+						<img id="mike_ehrmantraut" class="character-picture" alt="picture of Mike Ehrmantraut" src="img/mikeEhrmantraut.jpg">
+						<img id="saul_goodman" class="character-picture" alt="picture of Saul Goodman" src="img/saulGoodman.jpg">
+						<img id="gustavo_fring" class="character-picture" alt="picture of Gustavo Fring" src="img/gustavoFring.jpg">
+						<img id="skyler" class="character-picture" alt="picture of Skyler" src="img/skyler.jpg">
+						<img id="hank_schrader" class="character-picture" alt="picture of Hank Schrader" src="img/hankSchrader.jpg">					
+						<img id="badger" class="character-picture" alt="picture of Badger" src="img/badger.jpg">			
+						<img id="the_fly" class="character-picture" alt="picture of The fly" src="img/theFly.jpg">		
+						<img id="unknown" class="character-picture picture-active" alt="picture of the character" src="img/point_d'interrogation.png">
+					</div>
 				</div>
 				<div id="buttons">
-					<input id="inputSubmit" class="bold" type="submit" value="Let's Go !" onclick="location.href='#masque-opaque';">
+					<input id="inputSubmit" class="bold" type="submit" value="Let's Go !">
 					<input id="inputSubmit2" class="bold" type="submit" value="Try an other quote">
 				</div>
 			</form>
